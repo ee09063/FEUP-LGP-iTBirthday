@@ -1,0 +1,230 @@
+<ion-view data-ng-init="getStatistics()">
+  <ion-content padding="true" overflow-scroll="true" id="dashboard">
+    <div class="row responsive-sm responsive-md" id="anniversaries_this_month">
+      <div class="col col-70 col-offset-15">
+        <div class="title">Aniversários</div>
+        <ion-slide-box id="month_employees">
+          <ion-slide ng-repeat="group in data.MonthGroups">
+            <div class="row responsive-sm responsive-md month-group" style="width: 100%;">
+              <a id="btn-previous" ng-click="previousMonthGroup()"></a>
+              <a id="btn-next" ng-click="nextMonthGroup()"></a>
+              <div class="col col-50 month-left" id="{{group[0]}}" ng-click="onMonthClicked($index, 0)">
+                <div class="month-employees-container">
+                  <div class="month-employee"
+                       ng-repeat="employee in data.Employees | filter:filterMonthEmployees(group[0]) | limitTo : 10">
+                    <img ng-src="{{getEmployeeImagePath(employee.photoPath)}}" title="{{employee.name}}"
+                         alt="{{employee.name}}"
+                         width="50" height="50">
+                  </div>
+                </div>
+                <div class="month-name"><span>{{getExtendedMonthName(group[0])}}</span></div>
+              </div>
+              <div class="col col-50 month-right" id="{{group[1]}}" ng-click="onMonthClicked($index, 1)">
+                <div class="month-employees-container">
+                  <div class="month-employee"
+                       ng-repeat="employee in data.Employees | filter:filterMonthEmployees(group[1]) | limitTo : 10">
+                    <img ng-src="{{getEmployeeImagePath(employee.photoPath)}}" title="{{employee.name}}"
+                         alt="{{employee.name}}"
+                         width="50" height="50">
+                  </div>
+                </div>
+                <div class="month-name"><span>{{getExtendedMonthName(group[1])}}</span></div>
+              </div>
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" id="births_dy_month">
+      <div class="col col-70 col-offset-15">
+        <div class="title">Distribuição dos aniversários por mês</div>
+        <div class="row responsive-sm">
+          <div class="col col-33">
+            <span class="month" title="Janeiro">Janeiro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Jan}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Jan > 0 ? data.BirthsByMonthTotal.Jan : '-'}}</span>
+          </div>
+          <div class="col col-33">
+            <span class="month" title="Fevereiro">Fevereiro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Feb}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Feb > 0 ? data.BirthsByMonthTotal.Feb : '-'}}</span>
+          </div>
+          <div class="col col-33">
+            <span class="month" title="Março">Março</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Mar}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Mar > 0 ? data.BirthsByMonthTotal.Mar : '-'}}</span>
+          </div>
+        </div>
+
+        <div class="row responsive-sm">
+          <div class="col">
+            <span class="month" title="Abril">Abril</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Apr}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Apr > 0 ? data.BirthsByMonthTotal.Apr : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Maio">Maio</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.May}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.May > 0 ? data.BirthsByMonthTotal.May : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Junho">Junho</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Jun}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Jun > 0 ? data.BirthsByMonthTotal.Jun : '-'}}</span>
+          </div>
+        </div>
+
+        <div class="row responsive-sm">
+          <div class="col">
+            <span class="month" title="Julho">Julho</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Jul}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Jul > 0 ? data.BirthsByMonthTotal.Jul : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Agosto">Agosto</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Aug}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Aug > 0 ? data.BirthsByMonthTotal.Aug : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Setembro">Setembro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Sep}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Sep > 0 ? data.BirthsByMonthTotal.Sep : '-'}}</span>
+          </div>
+        </div>
+
+        <div class="row responsive-sm">
+          <div class="col">
+            <span class="month" title="Outubro">Outubro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Oct}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Oct > 0 ? data.BirthsByMonthTotal.Oct : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Novembro">Novembro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Nov}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Nov > 0 ? data.BirthsByMonthTotal.Nov : '-'}}</span>
+          </div>
+          <div class="col">
+            <span class="month" title="Dezembro">Dezembro</span>
+            <div class="w3-progress-container dashboard-progress-bar-container">
+              <div class="w3-progressbar dashboard-progress-bar" style="width:{{data.BirthsByMonthRatio.Dec}}">
+              </div>
+            </div>
+            <span class="value">{{data.BirthsByMonthTotal.Dec > 0 ? data.BirthsByMonthTotal.Dec : '-'}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" id="ratio_and_years">
+      <div class="col col-70 col-offset-15">
+        <div class="row responsive-sm responsive-md">
+          <div class="col col-50" id="mf_chart">
+            <div class="title">Distribuição do rácio de mulheres/homens</div>
+            <div>
+              <canvas id="doughnut" class="chart chart-doughnut"
+                      chart-data="data.MFData"
+                      chart-labels="data.MFLabels"
+                      chart-colours="data.MFBackgroundColors">
+              </canvas>
+            </div>
+            <div class="mf-chart-legend">
+              <p class="icon-man">Homens: <b>{{data.MFData[1]}}</b> ({{data.MFRatio.Male}})</p>
+              <p class="icon-woman">Mulheres: <b>{{data.MFData[0]}}</b> ({{data.MFRatio.Female}})</p>
+            </div>
+
+            <div class="separator show-when-small"></div>
+          </div>
+
+          <div class="col col-50" id="age_chart">
+            <div class="title">Distribuição por faixas etárias</div>
+            <div>
+              <canvas id="line" width="400" height="200" class="chart chart-line"
+                      chart-data="data.AgeGroups"
+                      chart-labels="data.AgeLabels"
+                      chart-legend="false"
+                      chart-colours="data.AgeColors">
+              </canvas>
+            </div>
+            <div class="row">
+              <div class="col col-50">
+                <p>18-21: <b>{{data.AgeGroups[0][0]}}</b></p>
+                <p>21-25: <b>{{data.AgeGroups[0][1]}}</b></p>
+                <p>25-30: <b>{{data.AgeGroups[0][2]}}</b></p>
+              </div>
+              <div class="col col-50">
+                <p>30-40: <b>{{data.AgeGroups[0][3]}}</b></p>
+                <p>40+: <b>{{data.AgeGroups[0][4]}}</b></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" id="average_time">
+      <div class="col col-70 col-offset-15">
+        <div class="title">Tempo médio de permanência na empresa: <b>{{data.AverageTime}}</b> dias</div>
+      </div>
+    </div>
+
+
+    <script id="month_window.html" type="text/ng-template">
+      <ion-modal-view id="dashboard_modal">
+        <ion-header-bar>
+          <h1 class="title">Aniversários em <b>{{currentMonth}}</b></h1>
+        </ion-header-bar>
+        <ion-content padding="true" overflow-scroll="true">
+          <div class="row responsive-sm responsive-md">
+            <div class="col col-25" ng-repeat="emp in currentMonthBirthdays" ng-click="goToProfile(emp.id)">
+              <div class="container">
+                <div class="emp-img">
+                  <img ng-src="{{getEmployeeImagePath(emp.photoPath)}}" title="{{emp.name}} photo" alt="{{emp.name}}"
+                       width="100" height="100">
+                </div>
+                <div class="emp-name">{{emp.name}}</div>
+                <div class="emp-birth-date">{{getCleanDate(emp.birthDate)}}</div>
+              </div>
+            </div>
+          </div>
+        </ion-content>
+        <ion-footer-bar>
+          <a class="emp-btn-close" ng-click="modal.hide()">Fechar</a>
+        </ion-footer-bar>
+      </ion-modal-view>
+    </script>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,163 @@
+<ion-view data-ng-init="getEmployee()">
+  <ion-content padding="true" overflow-scroll="true">
+    <div class="row responsive-sm responsive-md" id="profile_div">
+      <div class="col col-50 col-offset-25">
+        <div class="row responsive-sm go-back-btn" ng-if="notCreating">
+          <a ui-sref="tabs.profile.search">Voltar</a>
+        </div>
+        <div class="row responsive-sm" id="profile_row">
+          <div class="col-50">
+            <div class="list">
+              <label class="item item-image" ng-if="isNewProfile">
+                <img ng-src="{{defaultImageURL}}" title="Avatar" alt="Avatar Image">
+              </label>
+              <label class="item item-image" ng-if="!isNewProfile">
+                <img ng-src="{{imageURL}}" err-src="{{defaultImageURL}}" title="Avatar" alt="Avatar Image">
+              </label>
+              <label class="item item-file" ng-hide="isView || hasExited">
+                <input id="file_upload" type="file" file-upload>
+              </label>
+              <div ng-if="!isNewProfile && isView">
+                <label class="item item-input item-stacked-label not-editable">
+                  <span class="input-label">Idade</span>
+                  <input type="text" placeholder="idade" ng-model="profile.age" ng-readonly="isView"/>
+                </label>
+                <label class="item item-input item-stacked-label not-editable">
+                  <span class="input-label">Aniversários na iTGROW</span>
+                  <input type="text" placeholder="Aniversários" ng-model="profile.birthdaysInCompany"
+                         ng-readonly="isView"/>
+                </label>
+                <label class="item item-input item-stacked-label not-editable">
+                  <span class="input-label">Dias na empresa</span>
+                  <input type="text" placeholder="Dias na Empresa" ng-model="profile.daysInCompany"
+                         ng-readonly="isView"/>
+                </label>
+              </div>
+            </div>
+            <div class="list" id="profile-dread-options" ng-if="!isNewProfile">
+              <div class="separator" ng-if="hasExited || !isView"></div>
+              <div ng-if="!isView && !hasExited" ng-show="!profile.exitDate || isChoosingExitDate">
+                <!-- INSERIR DATA DE SAIDA -->
+                <label ng-if="!profile.exitDate" class="item" id="add-exit-date-btn" ng-click="toggleShowExitDate()">
+                  <a>Adicionar data de saída</a>
+                </label>
+                <!-- DATA DE SAIDA -->
+                <label class="item item-input item-stacked-label date" ng-show="isChoosingExitDate">
+                  <input class="input-date icon-calendar" datepicker type="text" placeholder="yyyy-mm-dd" maxlength="10"
+                         onkeydown="return false" ng-readonly="true" ng-model="profile.exitDate"/>
+                </label>
+                <div class="separator"></div>
+              </div>
+              <label class="item" id="remove-profile-btn" ng-if="hasExited || !isView" ng-click="showConfirmRemove()">
+                <a>Remover perfil</a>
+              </label>
+            </div>
+          </div>
+          <div class="col-50">
+            <div class="list" id="checkedFields">
+              <!-- NOME -->
+              <label class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Nome</span>
+                <input id="name" class="icon-pencil" type="text" placeholder="Nome" maxlength="75"
+                       ng-model="profile.name" ng-readonly="isView"/>
+              </label>
+              <!-- SEXO -->
+              <label class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Sexo</span>
+                <label id="gender" class="item-select">
+                  <select ng-model="profile.gender"
+                          ng-init="profile.gender = (profile.gender == undefined ? 'Male' : profile.gender)">
+                    <option value="Male">Masculino</option>
+                    <option value="Female">Feminino</option>
+                  </select>
+                </label>
+              </label>
+              <!-- TEL -->
+              <label class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Telefone / Telemóvel</span>
+                <input id="phoneNumber" class="icon-pencil" type="tel" placeholder="Telemóvel"
+                       ng-model="profile.phoneNumber" maxlength="9"/>
+              </label>
+              <!-- EMAIL -->
+              <label class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Endereço de Email</span>
+                <input id="email" class="icon-pencil" type="email" placeholder="Email" maxlength="40"
+                       ng-model="profile.email"/>
+              </label>
+              <!-- DATA DE NASCIMENTO -->
+              <label
+                class="item item-input item-stacked-label date {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Data de nascimento</span>
+                <input id="birthDate" class="input-date icon-calendar" datepicker type="text" placeholder="yyyy-mm-dd"
+                       maxlength="10" onkeydown="return false" ng-readonly="true" ng-model="profile.birthDate"/>
+              </label>
+              <!-- DATA DE ADMISSAO -->
+              <label
+                class="item item-input item-stacked-label date {{(isView || hasExited) ? 'not-editable' : 'editable'}}">
+                <span class="input-label">Data de admissão</span>
+                <input id="entryDate" class="input-date icon-calendar" datepicker type="text" placeholder="yyyy-mm-dd"
+                       maxlength="10" onkeydown="return false" ng-readonly="true" ng-model="profile.entryDate"/>
+              </label>
+              <!-- DATA DE SAIDA -->
+              <label class="item item-input item-stacked-label date exit-date not-editable" ng-if="hasExited">
+                <span class="input-label">Data de Saída</span>
+                <input class="input-date icon-calendar" datepicker type="text" placeholder="yyyy-mm-dd" maxlength="10"
+                       onkeydown="return false" ng-readonly="true" ng-model="profile.exitDate"/>
+              </label>
+              <div ng-if="!hasExited">
+                <div class="separator"></div>
+                <!-- EMAIL -->
+                <ion-checkbox id="send_mail" ng-model="profile.sendMail" ng-init="profile.sendMail = true"
+                              ng-checked="profile.sendMail" ng-disabled="isView || hasExited">Email de Aniversário
+                </ion-checkbox>
+                <!-- PERSONALIZAR -->
+                <ion-checkbox id="send_personalized_mail" ng-model="profile.sendPersonalizedMail"
+                              ng-init="profile.sendPersonalizedMail = false" ng-show="!isView && profile.sendMail"
+                              ng-checked="profile.sendPersonalizedMail" ng-disabled="isView || hasExited">Personalizar
+                </ion-checkbox>
+                <!-- TEXTO PERSONALIZAVEL -->
+                <label
+                  class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}"
+                  ng-show="profile.sendMail && profile.sendPersonalizedMail">
+                  <textarea id="emailCustom" rows="4" placeholder="Email personalizado (máx. 500 caracteres)"
+                            ng-model="profile.mailText" maxlength="500" ng-readonly="isView || hasExited"
+                            ng-disabled="isView || hasExited"></textarea>
+                </label>
+                <!-- SMS -->
+                <div class="separator"></div>
+                <ion-checkbox id="send_sms" ng-model="profile.sendSMS" ng-init="profile.sendSMS = true"
+                              ng-checked="profile.sendSMS" ng-disabled="isView || hasExited">SMS de Aniversário
+                </ion-checkbox>
+                <!-- PERSONALIZAR -->
+                <ion-checkbox id="send_personalized_sms" ng-model="profile.sendPersonalizedSMS"
+                              ng-init="profile.sendPersonalizedSMS = false" ng-show="!isView && profile.sendSMS"
+                              ng-checked="profile.sendPersonalizedSMS" ng-disabled="isView || hasExited">Personalizar
+                </ion-checkbox>
+                <!-- TEXTO PERSONALIZAVEL -->
+                <label
+                  class="item item-input item-stacked-label {{(isView || hasExited) ? 'not-editable' : 'editable'}}"
+                  ng-show="profile.sendSMS && profile.sendPersonalizedSMS">
+                  <textarea id="smsCustom" placeholder="SMS personalizado (máx. 70 caracteres)"
+                            ng-model="profile.smsText" maxlength="70"
+                            ng-readonly="isView || hasExited" ng-disabled="isView"></textarea>
+                </label>
+                <div class="separator"></div>
+                <!-- FACEBOOK -->
+                <ion-checkbox id="send_facebook" ng-model="profile.facebookPost" ng-init="profile.facebookPost = false"
+                              ng-checked="profile.facebookPost" ng-disabled="isView || hasExited">Post do Facebook
+                </ion-checkbox>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row responsive-sm" id="profile-buttons-row">
+          <a id="edit-profile-btn" ng-click="isView = false" ng-show="isView && !isNewProfile && !hasExited">Editar</a>
+          <a id="save-profile-changes-btn" ng-click="update_profile(profile)" ng-hide="isView || isNewProfile">Guardar
+            alterações</a>
+          <a id="create-profile-btn" ng-click="newProfile(profile)" ng-show="isNewProfile && !isView">Criar perfil</a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,546 @@
+/* MAIN PAGE */
+#profile_div #profile-buttons a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 2%;
+  width: 75%;
+  height: auto;
+  margin: auto;
+}
+
+#profile_div #profile-buttons a:hover {
+  background-color: white;
+}
+
+#profile_div #profile-buttons a > img {
+  width: 100%;
+  height: auto;
+  padding: 0 5%;
+}
+
+#profile_div #profile-buttons a > p {
+  color: #333333;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 5% 0;
+  font-size: 20px;
+}
+
+#profile_div .row.go-back-btn {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#profile_div .row.go-back-btn > a {
+  float: right;
+  padding: 5px 20px 5px 10px;
+  margin: auto 5px auto auto;
+  background: transparent url("../img/svg icons/right_arrow_orange.svg") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+/*********************
+     Search Page
+*********************/
+
+#search-profile-filter {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  background-color: transparent;
+}
+
+#search-profile-filter .row.filters {
+  margin: 0;
+  padding: 0 14px 0 0;
+}
+
+#search-profile-filter .row.filters > .col {
+  border: none;
+  outline: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 767px) {
+  #search-profile-filter .row.filters > .col:first-child {
+    padding-right: 5px;
+  }
+
+  #search-profile-filter .row.filters > .col:last-child {
+    padding-left: 5px;
+  }
+}
+
+#search-profile-filter .row.filters .item.item-input {
+  border: none;
+  margin: 0;
+  background-color: #f0f0f0 !important;
+}
+
+#search-profile-filter .row.filters .item.item-input.item-select {
+  line-height: inherit;
+  height: 100%;
+  padding-left: 0;
+}
+
+#search-profile-filter .row.filters .item.item-input.item-select::after {
+  display: none;
+}
+
+#search-profile-filter .row.filters .item.item-input.item-select {
+  background: url("../img/svg icons/down_arrow_blue.svg") no-repeat right;
+  -webkit-background-size: 20px;
+  background-size: 20px;
+  background-color: #f0f0f0 !important;
+}
+
+#search-profile-filter .row.filters .item.item-input.item-select > select {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  direction: ltr;
+  padding-left: 4px;
+  padding-right: 10px;
+  border: none;
+  outline: none;
+  text-align: left;
+  background-color: transparent !important;
+  top: -1px;
+}
+
+#search-profile-filter .row.filters .item.item-input > input,
+#search-profile-filter .row.filters .item.item-input.item-select > select {
+  height: 20px;
+}
+
+#search-profile-filter .row.filters .item.item-input.item-select > select > option {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#search-profile-filter #search-label {
+  outline: none;
+  border: none;
+  margin: 0;
+  width: 100%;
+  padding-left: 4px;
+}
+
+#search-profile-filter #search-label input:-ms-input-placeholder {
+  color: #333333;
+}
+
+#search-profile-filter #search-label input::-webkit-input-placeholder {
+  color: #333333;
+}
+
+#search-profile-filter #search-label input::-moz-placeholder {
+  color: #333333;
+}
+
+#search-profile-filter #search-label input:-moz-placeholder {
+  color: #333333;
+}
+
+#search-profile-filter #search-profile.has-header {
+  top: 44px;
+}
+
+#search-profile-filter #search-profile .title {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+@media screen and (max-width: 567px) {
+  #search-profile-filter #search-profile .row .col-50 {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #search-profile-filter #search-profile.has-header {
+    top: 95px;
+  }
+}
+
+/******************
+   Search Results
+*******************/
+#search-profile-results {
+  display: block;
+  height: auto;
+  overflow: auto;
+}
+
+#search-profile-results .item.item-avatar {
+  float: left;
+  margin: auto;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  pointer-events: none;
+  width: 50%;
+}
+
+@media (max-width: 567px) {
+  #search-profile-results .item.item-avatar {
+    display: block;
+    width: 100%;
+  }
+}
+
+#search-profile-results .item.item-avatar > a {
+  padding: 0;
+  cursor: pointer;
+  pointer-events: all;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  border: solid rgba(237, 160, 75, 1) !important;
+  border-width: 0 0 2px 0 !important;
+}
+
+#search-profile-results .item.item-avatar > a > .item-content {
+  padding: 10px 10px 10px 66px;
+  min-height: 66px;
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+#search-profile-results .item.item-avatar > a > .item-content:hover {
+  background-color: rgba(237, 160, 75, 0.75) !important;
+}
+
+#search-profile-results .item-avatar .item-content > img:first-child {
+  top: 10px;
+  left: 10px;
+  max-width: 46px;
+  max-height: 46px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+
+/*************************************************************************
+     Profile Page
+*************************************************************************/
+#profile_div #profile_row .col-50 {
+  padding: 5px;
+}
+
+#profile_div .list label.item {
+  border: none;
+  padding: 1px 2px 1px 2px;
+}
+
+#profile_div .list label.item > span {
+  padding: 2px 0;
+}
+
+#profile_div .list label.item.item-input textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 8em;
+  max-height: 12em;
+  background-color: #f0f0f0 !important;
+  padding: 4px;
+}
+
+#profile_div .list label.item.item-input input {
+  padding: 1px 3px 1px 3px;
+  height: 2em;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #f0f0f0 !important;
+}
+
+#profile_div .list label.item.item-input.not-editable {
+  pointer-events: none;
+}
+
+#profile_div .list label.item.item-input.not-editable textarea {
+  cursor: default;
+}
+
+#profile_div .list label.item.item-input.not-editable input.icon-pencil {
+  background: none;
+}
+
+#profile_div .list label.item.item-input.editable {
+  pointer-events: all;
+}
+
+#profile_div .list label.item.item-input.editable input.icon-pencil {
+  background: url("../img/icons/pencil.png") no-repeat right #eda04b;
+  -webkit-background-size: 20px;
+  background-size: 20px;
+}
+
+#profile_div .list label.item.item-input.editable input.icon-calendar {
+  background: url("../img/icons/calendar.png") no-repeat right #eda04b;
+  -webkit-background-size: 20px;
+  background-size: 20px;
+}
+
+#profile_div .list label.item label.item-select {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  right: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#profile_div .list label.item label.item-select::after {
+  display: none;
+}
+
+#profile_div .list label.item label.item-select select {
+  display: block;
+  position: inherit;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  height: 2em;
+  text-align: left;
+  margin: auto;
+  direction: inherit;
+  background: url("../img/svg icons/down_arrow_blue.svg") no-repeat right;
+  -webkit-background-size: 20px;
+  background-size: 20px;
+  background-color: #f0f0f0 !important;
+}
+
+#profile_div .list label.item.not-editable label.item-select select {
+  background: none;
+}
+
+#profile_div .list label.item.item-input.date {
+  cursor: pointer;
+}
+
+#profile_div .list label.item.item-input.date.exit-date input {
+  color: #c00000 !important;
+  font-weight: 600;
+}
+
+#profile_div .list label.item.item-input.date input {
+  cursor: pointer;
+}
+
+#profile_div .list label.item.item-input input::-webkit-input-placeholder {
+  color: #808080;
+}
+
+#profile_div .list label.item.item-input input:-moz-placeholder {
+  color: #808080;
+}
+
+#profile_div .list label.item.item-input input::-moz-placeholder {
+  color: #808080;
+}
+
+#profile_div .list label.item.item-input input:-ms-input-placeholder {
+  color: #808080;
+}
+
+#profile_div .list label.item-checkbox {
+  border: none;
+  padding: 4px 30px 4px 2px;
+}
+
+#profile_div .list label.item-checkbox > .checkbox {
+  top: 0;
+  right: 2px;
+  left: auto;
+  padding: 4px 0 4px 0;
+  margin-top: 0;
+}
+
+#profile_div .list label.item-checkbox > .checkbox .checkbox-icon {
+  right: 0;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+#profile_div .list label.item-checkbox > .checkbox .checkbox-icon::before {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 0 solid #f0f0f0;
+  background-color: #f0f0f0;
+}
+
+#profile_div .list label.item-checkbox > .checkbox .checkbox-icon::after {
+  width: 12px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-color: #2C4E7D;
+}
+
+#profile_div .list label.item-checkbox > .checkbox input:checked + .checkbox-icon::after {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  border-color: #2C4E7D;
+}
+
+#profile_div .input-date {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#profile_div .input-date::-moz-selection {
+  background: transparent;
+}
+
+#profile_div .input-date::selection {
+  background: transparent;
+}
+
+#profile_div .toggle input:checked + .track {
+  border-color: #f0f0f0;
+  background-color: #f0f0f0;
+}
+
+#profile_div .list {
+  margin-bottom: 0;
+}
+
+#profile_div .list > .item.item-image {
+  padding-top: 28px;
+  height: 200px;
+}
+
+#profile_div .list > .item.item-image > span {
+  text-align: left;
+  display: block;
+}
+
+#profile_div .list > .item.item-image > img {
+  display: block;
+  margin: auto;
+  border: none;
+  max-height: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  width: auto;
+}
+
+#profile_div .list > .item.item-file {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+#profile_div .list > .item.item-file input[type="file"] {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding: 4px;
+  margin: auto;
+  background-color: transparent !important;
+}
+
+#profile_div #profile-buttons-row {
+  padding: 10px 10px 20px 10px;
+}
+
+#profile_div #profile-buttons-row > a {
+  float: right;
+  padding: 5px 20px 5px 10px;
+  margin: auto 5px auto auto;
+}
+
+#profile-dread-options.list label.item {
+  padding: 5px 3px 5px 3px;
+  border: none;
+}
+
+#profile-dread-options.list label.item > input {
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+#profile-dread-options a {
+  padding: 5px 5px 5px 20px;
+  margin: auto;
+}
+
+#profile_div #profile-buttons-row > #edit-profile-btn {
+  background: transparent url("../img/svg icons/pencil_blue.svg") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#profile_div #profile-buttons-row > #create-profile-btn {
+  background: transparent url("../img/svg icons/confirm_blue.svg") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#profile_div #profile-buttons-row > #save-profile-changes-btn {
+  background: transparent url("../img/svg icons/confirm_blue.svg") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#profile_div #add-exit-date-btn > a {
+  background: transparent url("../img/svg icons/down_arrow_blue.svg") no-repeat left center !important;
+  background-size: 20px !important;
+}
+
+#profile_div #remove-profile-btn > a {
+  background: transparent url("../img/svg icons/trash_bin.svg") no-repeat left center !important;
+  background-size: 20px !important;
+}
+
+/******************************
+          Popup
+******************************/
+.profile-alert-popup.popup-container .popup button:hover,
+.profile-confirm-popup.popup-container .popup button.button-dark:hover {
+  background-color: #eda04b !important;
+}
+
+.profile-confirm-popup.popup-container .popup button.button-assertive:hover {
+  background-color: #DB4B23 !important;
+}
+
+.profile-alert-popup.popup-container .popup,
+.profile-confirm-popup.popup-container .popup {
+  background-color: #f1f1f2 !important;
+}
+
+.profile-confirm-popup.popup-container .popup button,
+.profile-alert-popup.popup-container .popup button {
+  color: #434343;
+  background-color: transparent !important;
+
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.profile-alert-popup.popup-container .popup-head .popup-title,
+.profile-confirm-popup.popup-container .popup-head .popup-title {
+  font-weight: 900;
+}
+
+.profile-alert-popup.popup-container .popup-buttons .button.activated,
+.profile-confirm-popup.popup-container .popup-buttons .button.activated {
+  background-color: #e8871a !important;
+}

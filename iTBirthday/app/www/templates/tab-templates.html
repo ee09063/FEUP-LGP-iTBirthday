@@ -1,0 +1,74 @@
+<ion-view>
+  <ion-content padding="true" overflow-scroll="true" data-ng-init="getDefaultMsg()">
+    <div id="default_messages_div">
+      <div class="row responsive-sm responsive-md">
+        <div class="col col-50 col-offset-25" id="email_template">
+          <label class="title">Template Email</label>
+          <label class="item item-input item-stacked-label">
+            <span class="item-label">Mensagem</span>
+            <div class="separator"></div>
+            <textarea id="emailMsg" rows="6" class="app-color" placeholder="Template Email"
+                      ng-model="defaultMsg.email"></textarea>
+          </label>
+
+          <div class="banner-buttons">
+            <a class="icon-arrow-left {{(index == 0 || banners.length == 0) ? 'disable-click' : ''}}"
+               ng-click="previous()">Banner anterior</a>
+            <a class="banner-default-button" ng-click="makeDefault()" ng-show="index != index_default_banner">
+              Predefinir</a>
+            <a class="banner-default-button default" ng-show="index == index_default_banner"><i>Predefinido</i></a>
+            <a class="icon-arrow-right {{(index == banners.length-1 || banners.length == 0) ? 'disable-click' : ''}}"
+               ng-click="next()">Banner seguinte</a>
+          </div>
+
+          <ion-slide-box on-slide-changed="slideHasChanged($index)" id="banners">
+            <ion-slide ng-repeat="ban in banners">
+              <img ng-src="{{ban}}" style="width: 100%">
+            </ion-slide>
+          </ion-slide-box>
+
+          <label class="item item-input item-stacked-label" id="add_banner">
+            <span class="item-label">Adicionar Banner</span>
+            <input id="file_upload" type="file" file-upload>
+          </label>
+
+          <div class="separator"></div>
+        </div>
+      </div>
+      <div class="row responsive-sm responsive-md">
+        <div class="col col-50 col-offset-25" id="sms_template">
+          <label class="title">Template SMS</label>
+          <label class="item item-input item-stacked-label app-color">
+            <span class="item-label">Mensagem (máx. 70 caracteres)</span>
+            <div class="separator"></div>
+            <textarea id="smsMsg" rows="6" maxlength="70" class="app-color" placeholder="Template SMS"
+                      ng-model="defaultMsg.sms"></textarea>
+          </label>
+
+          <div class="separator"></div>
+        </div>
+      </div>
+      <div class="row responsive-sm responsive-md">
+        <div class="col col-50 col-offset-25" id="fb_template">
+          <label class="title">Template Facebook</label>
+          <label class="item item-input item-stacked-label app-color ">
+            <span class="item-label">Mensagem (máx. 240 caracteres)</span>
+            <div class="separator"></div>
+            <textarea id="fbMsg" rows="6" maxlength="240" class="app-color" placeholder="Template Facebook"
+                      ng-model="defaultMsg.fb"></textarea>
+          </label>
+        </div>
+      </div>
+      <div class="row responsive-sm responsive-md" id="template_buttons">
+        <div class="col col-50 col-offset-25">
+          <div class="block">
+            <a id="revert_templates_btn" ng-click="getDefaultMsg()">Reverter para dados no servidor</a>
+          </div>
+          <div class="block">
+            <a id="save_templates_changes_btn" ng-click="saveChanges()"> Guardar alterações</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

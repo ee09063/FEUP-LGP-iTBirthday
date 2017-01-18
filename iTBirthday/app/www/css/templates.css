@@ -1,0 +1,164 @@
+#default_messages_div .row .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#default_messages_div .row label.item.item-input {
+  margin: 10px 0 15px 0;
+  padding: 10px;
+  border: none;
+  background-color: #f1f1f2;
+}
+
+#default_messages_div .row label.item.item-input > textarea {
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 8em;
+  max-height: 20em;
+  height: 8em;
+}
+
+#default_messages_div .row label.item.item-input > #file_upload {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  max-height: 32px;
+  height: auto;
+  line-height: 16px;
+  padding: 5px;
+}
+
+#default_messages_div #email_template .banner-buttons {
+  display: block;
+  margin-top: 5px;
+  padding-bottom: 4px;
+  width: 100%;
+  overflow: auto;
+  border: none;
+}
+
+#default_messages_div #email_template a.banner-default-button {
+  text-align: center;
+}
+
+#default_messages_div #email_template a {
+  background-color: transparent;
+
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+#default_messages_div #email_template #add_banner {
+  margin-top: 0;
+}
+
+#default_messages_div #email_template a:hover {
+  background-color: rgba(237, 160, 75, 0.8) !important;
+}
+
+#default_messages_div #email_template a.banner-default-button.default {
+  background-color: transparent !important;
+  cursor: default;
+  font-weight: 600;
+}
+
+#default_messages_div #email_template .banner-buttons > a {
+  padding: 2px;
+  text-align: center;
+  float: left;
+  width: 33%;
+  margin: auto;
+}
+
+#default_messages_div #file_upload {
+  display: block;
+}
+
+#default_messages_div #email_template .banner-buttons > a:first-child {
+  text-align: left;
+}
+
+#default_messages_div #email_template .banner-buttons > a:last-child {
+  text-align: right;
+}
+
+#default_messages_div #email_template .banner-buttons > a.disable-click {
+  pointer-events: none;
+  color: #d1d1d2 !important;
+}
+
+#default_messages_div #email_template .banner-buttons > a.icon-arrow-left {
+  padding-left: 16px;
+  background: transparent url("../img/icons/left_arrow.png") no-repeat left center !important;
+  background-size: 10px !important;
+}
+
+#default_messages_div #email_template .banner-buttons > a.icon-arrow-right {
+  padding-right: 16px;
+  background: transparent url("../img/icons/right_arrow.png") no-repeat right center !important;
+  background-size: 10px !important;
+}
+
+#default_messages_div #banners img {
+  width: auto;
+  max-height: 300px;
+}
+
+#default_messages_div #template_buttons a {
+  float: right;
+}
+
+#default_messages_div #template_buttons a#save_templates_changes_btn {
+  padding: 5px 20px 5px 10px;
+  margin: auto 5px auto auto;
+  background: transparent url("../img/icons/confirm.png") no-repeat right center !important;
+  background-size: 16px !important;
+}
+
+#default_messages_div #template_buttons a#revert_templates_btn {
+  padding: 5px 23px 5px 10px;
+  margin: auto 2px auto auto;
+  background: transparent url("../img/icons/reload.png") no-repeat right center !important;
+  background-size: 21px !important;
+}
+
+/******************************
+          Popup
+******************************/
+.template-alert-popup.popup-container .popup button:hover {
+  background-color: #eda04b !important;
+}
+
+.template-alert-popup.popup-container .popup button.button-assertive:hover {
+  background-color: #DB4B23 !important;
+}
+
+.template-alert-popup.popup-container .popup  {
+  background-color: #f1f1f2 !important;
+}
+
+.template-alert-popup.popup-container .popup button  {
+  color: #434343;
+  background-color: transparent !important;
+
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.template-alert-popup.popup-container .popup-head .popup-title {
+  font-weight: 900;
+}
+
+.template-alert-popup.popup-container .popup-buttons .button.activated  {
+  background-color: #e8871a !important;
+}

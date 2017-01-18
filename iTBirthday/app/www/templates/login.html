@@ -1,0 +1,24 @@
+<ion-view>
+  <ion-content padding="true" overflow-scroll="true" id="login_page" data-ng-init="resetInputFields()">
+    <div class="row responsive-sm responsive-md">
+      <div class="col col-33 col-offset-33" id="login-logo">
+        <img ng-src="{{defaultPath}}img/login-icon.png" class="img-responsive" width="500" height="500"/>
+      </div>
+    </div>
+    <div class="row responsive-sm responsive-md">
+      <div class="col col-33 col-offset-33" id="login-input-div">
+        <label class="item item-input app-color">
+          <input type="text" placeholder="Utilizador" ng-model="user.username" ng-enter="login()">
+        </label>
+        <label class="item item-input app-color">
+          <input type="password" placeholder="Password" ng-model="user.password" ng-enter="login()">
+        </label>
+      </div>
+    </div>
+    <div class="row responsive-sm responsive-md" id="login_btn">
+      <div class="col col-33 col-offset-33">
+        <a ng-click="login()"><span>Login</span></a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,209 @@
+@font-face {
+    font-family: ApexNewLight;
+    src: url("../fonts/apex_new_light.otf");
+}
+
+*{
+  font-family: ApexNewLight, Arial, serif !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+}
+
+.app-color {
+	background: #f1f1f2 !important;
+}
+
+.tabs-background-app-color > .tabs {
+  background-color: white !important;
+}
+
+.has-tabs-top {
+  top: 75px;
+}
+
+.bar-header.has-tabs-top {
+  top: 0;
+}
+
+.tabs-top > .tabs {
+  top: 20px;
+  height: 54px;
+}
+
+.tabs-top.tabs-striped .tab-item {
+  margin-top: 0;
+  border-width: 0 0 2px 0 !important;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .tabs-top.tabs-striped .tab-item span {
+    display: none;
+  }
+}
+
+.loading-container .loading {
+  background-color: transparent !important;
+}
+
+.loading-container .loading svg g {
+  stroke: #eda04b;
+  stroke-width: 6;
+}
+
+.backdrop {
+  background-color: white;
+}
+
+.backdrop.active {
+  opacity: 0.5;
+}
+
+.spinner svg {
+  fill: #ECA04B;
+  width: 100px;
+  height: 100px;
+}
+
+.separator {
+  box-sizing: border-box;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  border: 1px solid #dddddd;
+  margin: 5px auto 5px auto;
+}
+
+/*********************
+     Date Picker
+*********************/
+#ui-datepicker-div.ui-datepicker {
+  background: #f1f1f2 !important;
+  border-radius: 0;
+  border: 1px solid #aaa;
+  color: #222;
+  font-size: 1.1em;
+  width: 17em;
+  padding: .2em;
+  min-height: 0;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header {
+  position: relative;
+  padding: .2em 0;
+  border: none;
+  border-radius: 0;
+  //background: #2C4E7D;
+  background: none;
+  color: #222;
+  min-height: 0;
+  font-weight: bold;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  left: .2em;
+  top: auto;
+  position: absolute;
+  width: 1.8em;
+  height: 1.8em;
+  border: none;
+  border-radius: 0;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-prev.ui-datepicker-prev-hover {
+  background: none;
+  font-weight: normal;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-prev span {
+  display: block;
+  position: relative;
+  background: transparent url("../img/svg icons/left_arrow_orange.svg") no-repeat center center !important;
+  background-size: 20px !important;
+  text-indent: -99999px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  right: .2em;
+  top: auto;
+  position: absolute;
+  width: 1.8em;
+  height: 1.8em;
+  border: none;
+  border-radius: 0;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-datepicker-next-hover {
+  background: none;
+  font-weight: normal;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-next span {
+  display: block;
+  position: relative;
+  background: transparent url("../img/svg icons/right_arrow_orange.svg") no-repeat center center !important;
+  background-size: 20px !important;
+  text-indent: -99999px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+  margin: 0 2em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {
+  width: 45%;
+  font-size: 1em;
+  margin: 1px 0;
+  background: #fff url("../img/svg icons/down_arrow_blue.svg") no-repeat right center !important;
+  background-size: 20px !important;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar tbody tr td {
+  color: #2C4E7D;
+
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar tbody tr td a {
+  background: #fff;
+
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar tbody tr td:hover {
+  color: #f1f1f2;
+}
+
+#ui-datepicker-div.ui-datepicker .ui-datepicker-calendar tbody tr td:hover a {
+  background: #2C4E7D;
+}

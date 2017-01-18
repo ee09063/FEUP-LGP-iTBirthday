@@ -1,0 +1,43 @@
+<ion-view data-ng-init="getOutlookLink()">
+  <ion-content padding="true" overflow-scroll="true" id="outlook">
+
+    <div class="row responsive-sm responsive-md">
+      <div class="col col-50 col-offset-25">
+        <a href="{{outlookLink}}" class="icon-arrow-right">Log in</a>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" ng-show="isAuthenticated">
+      <div class="col col-50 col-offset-25">
+        <a class="icon-refresh" ng-click="updateOutlookCalendar()">Atualizar Calendário</a>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" ng-show="!isAuthenticated">
+      <div class="col col-50 col-offset-25">
+        <div class="card">
+          <div class="item item-text-wrap title">A aplicação não está autenticada!</div>
+          <div class="separator"></div>
+          <div class="item item-text-wrap">
+            <p>Para autenticar, clique no botão <b>Log in</b> e siga o processo de login.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row responsive-sm responsive-md" ng-show="isAuthenticated">
+      <div class="col col-50 col-offset-25">
+        <div class="card">
+          <div class="item item-text-wrap title">A aplicação está autenticada.</div>
+          <div class="separator"></div>
+          <div class="item item-text-wrap">
+            <p>Email: <b>{{email}}</b></p>
+            <p>Validade do Token: <b>{{expirationDate.toLocaleString()}}</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
+

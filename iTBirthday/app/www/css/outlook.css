@@ -1,0 +1,78 @@
+#outlook a {
+  float: right;
+  padding: 5px 15px 5px 10px;
+  margin: auto 5px auto auto;
+  background: transparent url("../img/icons/right_arrow.png") no-repeat right center !important;
+  background-size: 10px !important;
+}
+
+#outlook .icon-refresh {
+  padding-right: 25px;
+  background: transparent url("../img/icons/reload.png") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#outlook a.icon-arrow-right {
+  margin: auto 9px auto auto;
+}
+
+#outlook .icon-arrow-right {
+  padding-right: 21px;
+  background: transparent url("../img/icons/right_arrow.png") no-repeat right center !important;
+  background-size: 10px !important;
+}
+
+#outlook .card {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+#outlook .card .item {
+  background-color: transparent;
+  border: none;
+}
+
+#outlook .card .item.title {
+  text-align: center;
+}
+
+#outlook .row .col {
+  margin-bottom: 0;
+}
+
+.outlook-alert-popup-success .popup,
+.outlook-alert-popup-error .popup {
+  background-color: #f1f1f2 !important;
+}
+
+.outlook-alert-popup-success.popup-container .popup-head {
+  border-bottom: 2px solid #2C4E7D !important;
+}
+
+.outlook-alert-popup-success.popup-container .popup-head .popup-title {
+  color: #2C4E7D !important;
+}
+
+.outlook-alert-popup-error.popup-container .popup-head {
+  border-bottom: 2px solid #DB4B23 !important;
+}
+
+.outlook-alert-popup-error.popup-container .popup-head .popup-title {
+  color: #DB4B23 !important;
+}
+
+.outlook-alert-popup-success.popup-container .popup-head .popup-title,
+.outlook-alert-popup-error.popup-container .popup-head .popup-title {
+  font-weight: 900;
+}
+
+.outlook-alert-popup-success.popup-container .popup-buttons .button,
+.outlook-alert-popup-error.popup-container .popup-buttons .button {
+  background-color: #eda04b !important;
+}
+
+.outlook-alert-popup-success.popup-container .popup-buttons .button.activated,
+.outlook-alert-popup-error.popup-container .popup-buttons .button.activated {
+  background-color: #e8871a !important;
+}

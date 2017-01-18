@@ -1,0 +1,272 @@
+#dashboard .col.col-70 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 70%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+#dashboard #month_employees .slider-pager {
+  display: none;
+}
+
+#dashboard #month_employees .slider-slide {
+  width: 100%;
+}
+
+#dashboard #month_employees .slider-slide .month-group {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+#dashboard #month_employees .slider-slide .month-group .col {
+  cursor: pointer;
+
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+#dashboard #month_employees .slider-slide .month-group .col:hover {
+  background-color: #f1f1f2;
+}
+
+#dashboard #month_employees .slider-slide .month-group a#btn-previous {
+  position: absolute;
+  left: 0;
+  background: transparent url("../img/icons/left_arrow.png") no-repeat center center !important;
+  background-size: 12px !important;
+  width: 20px;
+  height: 100%;
+}
+
+#dashboard #month_employees .slider-slide .month-group a#btn-next {
+  position: absolute;
+  right: 0;
+  background: transparent url("../img/icons/right_arrow.png") no-repeat center center !important;
+  background-size: 12px !important;
+  width: 20px;
+  height: 100%;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-employees-container {
+  height: 120px;
+  overflow: auto;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-name {
+  height: 30px;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-name > span {
+  font-size: 20px;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-left .month-name {
+  padding-right: 4px;
+  border-top: 3px solid #ECA04B;
+  text-align: right;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-right .month-name {
+  padding-left: 4px;
+  border-top: 3px solid #2F4D7C;
+  text-align: left;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-employee {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 20%;
+  height: 60px;
+  float: left;
+  text-align: center;
+}
+
+#dashboard #month_employees .slider-slide .month-group .month-employee img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#dashboard .col.col-offset-15 {
+  margin-left: 15%;
+}
+
+#dashboard #mf_chart canvas,
+#dashboard #age_chart canvas {
+  display: block;
+  max-width: 500px !important;
+  max-height: 250px !important;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  #dashboard .col.col-70 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-bottom: 15px;
+    margin-left: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+#dashboard div.title {
+  display: block;
+  text-align: center;
+  font-size: 150%;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#dashboard div.info {
+  display: block;
+  padding: 10px;
+}
+
+#dashboard #ratio_and_years.row .row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#dashboard #ratio_and_years.row .row > .col-33 {
+  padding-left: 0;
+}
+
+#dashboard #ratio_and_years.row .row > .col-66 {
+  padding-right: 0;
+}
+
+#dashboard #births_dy_month .row .col {
+  overflow: auto;
+}
+
+#dashboard #births_dy_month .row .col > span.month {
+  float: left;
+  width: 30%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+#dashboard #births_dy_month .row .col > .dashboard-progress-bar-container {
+  float: left;
+  width: 60%;
+  background-color: transparent !important;
+}
+
+#dashboard #births_dy_month .row .col > span.value {
+  float: left;
+  width: 10%;
+  text-align: center;
+}
+
+#dashboard #births_dy_month .dashboard-progress-bar-container > .dashboard-progress-bar {
+  width: 0;
+  background-color: #eda04b !important;
+  margin-top: 6px;
+  margin-bottom: 4px;
+  height: 12px;
+
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+#dashboard .separator.show-when-small {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #dashboard .separator.show-when-small {
+    display: block;
+  }
+}
+
+#dashboard_modal {
+  background-color: #f1f1f2 !important;
+}
+
+#dashboard_modal ion-header-bar {
+  background-color: #f1f1f2 !important;
+}
+
+#dashboard_modal ion-footer-bar {
+  border-top: 1px solid #dddddd;
+  background-color: #f1f1f2 !important;
+}
+
+#dashboard_modal .row {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #f1f1f2 !important;
+}
+
+#dashboard_modal .row .col > .container {
+  height: 100%;
+  background-color: #ffffff;
+  padding: 5px;
+  border-bottom: solid rgba(237, 160, 75, 1) !important;
+}
+
+#dashboard_modal .emp-img {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#dashboard_modal .emp-img > img {
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#dashboard_modal .emp-name {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#dashboard_modal .emp-birth-date {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#dashboard_modal .bar.bar-footer {
+  padding: 0;
+}
+
+#dashboard_modal .emp-btn-close {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  line-height: 2em;
+  font-size: 18px;
+  text-align: center;
+
+  -webkit-transition: background-color .2s;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+#dashboard_modal .emp-btn-close:hover {
+  background-color: #eda04b !important;
+}
+
+.modal-backdrop-bg {
+  background-color: #f1f1f2;
+}

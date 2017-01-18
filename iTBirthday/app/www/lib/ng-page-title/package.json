@@ -1,0 +1,115 @@
+{
+  "_args": [
+    [
+      "ng-page-title",
+      "C:\\Users\\andre\\Documents\\GitHub\\feup-lgp-2c\\iTBirthday"
+    ]
+  ],
+  "_from": "ng-page-title@latest",
+  "_id": "ng-page-title@1.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng-page-title",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "email": "simon@simonemms.com",
+    "name": "riggerthegeek"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ng-page-title",
+    "raw": "ng-page-title",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-page-title/-/ng-page-title-1.1.1.tgz",
+  "_shasum": "54b193736ac65dfc8e09fb176e3ca0d68b691454",
+  "_shrinkwrap": null,
+  "_spec": "ng-page-title",
+  "_where": "C:\\Users\\andre\\Documents\\GitHub\\feup-lgp-2c\\iTBirthday",
+  "author": {
+    "email": "simon@simonemms.com",
+    "name": "Simon Emms"
+  },
+  "bugs": {
+    "url": "https://github.com/riggerthegeek/ng-page-title/issues"
+  },
+  "dependencies": {},
+  "description": "Page title directive for an Angular project",
+  "devDependencies": {
+    "angular": "^1.4.3",
+    "angular-mocks": "^1.4.3",
+    "angular-route": "^1.4.3",
+    "angular-ui-router": "^0.2.15",
+    "brfs": "^1.4.0",
+    "browserify": "^11.0.1",
+    "chai": "^3.2.0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs": "^2.0.0",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-karma": "^0.12.0",
+    "grunt-ng-annotate": "^1.0.1",
+    "grunt-prompt": "^1.3.0",
+    "grunt-shell": "^1.1.2",
+    "grunt-timer": "^0.6.0",
+    "karma": "^0.13.3",
+    "karma-browserify": "^4.2.1",
+    "karma-chai": "^0.1.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.4",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-sinon": "^1.0.4",
+    "karma-sinon-chai": "^1.0.0",
+    "load-grunt-tasks": "^3.2.0",
+    "lodash": "^3.10.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^1.9.17",
+    "semver": "^5.0.1",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "54b193736ac65dfc8e09fb176e3ca0d68b691454",
+    "tarball": "https://registry.npmjs.org/ng-page-title/-/ng-page-title-1.1.1.tgz"
+  },
+  "gitHead": "7c6b1133272b1ad1ae8a62edabde4bd5c2d510a7",
+  "homepage": "https://github.com/riggerthegeek/ng-page-title",
+  "keywords": [
+    "angular",
+    "page",
+    "title"
+  ],
+  "license": "MIT",
+  "main": "./dist/ng-page-title.min.js",
+  "maintainers": [
+    {
+      "email": "simon@simonemms.com",
+      "name": "riggerthegeek"
+    }
+  ],
+  "name": "ng-page-title",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riggerthegeek/ng-page-title.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "1.1.1"
+}

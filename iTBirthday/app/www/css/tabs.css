@@ -1,0 +1,81 @@
+.tabs-top.tabs-striped .tab-item > i {
+  margin-bottom: 4px;
+  color: #FFD17B !important;
+}
+
+.tabs-top.tabs-striped .tab-item.tab-item-active,
+.tabs-top.tabs-striped .tab-item.activated {
+  margin-top: 0;
+  border-width: 0 0 2px 0 !important;
+  border-color: #FFD17B !important;
+}
+
+.tab-nav.tabs {
+  border-bottom: solid 1px #FFD17B !important;
+}
+
+.tab-nav.tabs a.tab-item i.icon:before {
+  content: "";
+}
+
+.tab-nav.tabs a.tab-item i.icon {
+  background: no-repeat center;
+  -webkit-background-size: 28px;
+  background-size: 28px;
+}
+
+.tab-nav.tabs a.tab-icon-facebook.tab-item i.icon {
+  background-image: url("../img/menu icons/facebook.svg");
+}
+
+.tab-nav.tabs a.tab-icon-facebook.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/facebook_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-logout.tab-item i.icon {
+  background-image: url("../img/menu icons/logout.svg");
+}
+
+.tab-nav.tabs a.tab-icon-logout.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/logout_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-outlook.tab-item i.icon {
+  background-image: url("../img/menu icons/outlook.svg");
+}
+
+.tab-nav.tabs a.tab-icon-outlook.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/outlook_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-templates.tab-item i.icon {
+  background-image: url("../img/menu icons/templates.svg");
+}
+
+.tab-nav.tabs a.tab-icon-templates.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/templates_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-new-profile.tab-item i.icon {
+  background-image: url("../img/menu icons/new_profile.svg");
+}
+
+.tab-nav.tabs a.tab-icon-new-profile.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/new_profile_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-profiles.tab-item i.icon {
+  background-image: url("../img/menu icons/profiles.svg");
+}
+
+.tab-nav.tabs a.tab-icon-profiles.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/profiles_filled.svg");
+}
+
+.tab-nav.tabs a.tab-icon-dashboard.tab-item i.icon {
+  background-image: url("../img/menu icons/dashboard.svg");
+}
+
+.tab-nav.tabs a.tab-icon-dashboard.tab-item.tab-item-active i.icon {
+  background-image: url("../img/menu icons/dashboard_filled.svg");
+}

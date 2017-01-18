@@ -1,0 +1,83 @@
+#fb_content .fb-buttons a {
+  float: right;
+  padding: 5px 15px 5px 10px;
+  margin: auto 5px auto auto;
+  background: transparent url("../img/icons/right_arrow.png") no-repeat right center !important;
+  background-size: 10px !important;
+}
+
+#fb_content #fb_link a {
+  color: #0c60ee !important;
+}
+
+#fb_content .icon-refresh {
+  padding-right: 25px;
+  background: transparent url("../img/icons/reload.png") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#fb_content .icon-facebook {
+  padding-right: 25px;
+  background: transparent url("../img/icons/reload.png") no-repeat right center !important;
+  background-size: 20px !important;
+}
+
+#fb_content .card {
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+#fb_content .card .item {
+  background-color: transparent;
+  border: none;
+}
+
+#fb_content .card .item.title {
+  text-align: center;
+}
+
+#fb_content .row .col {
+  margin-bottom: 0;
+}
+
+#fb_content #fb_page_info {
+  text-align: center;
+}
+
+.popup-container.facebook-confirm-popup .popup {
+  background-color: #f1f1f2;
+  width: 50%;
+}
+
+@media screen and (max-width: 780px) {
+  .popup-container.facebook-confirm-popup .popup {
+    background-color: #f1f1f2;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .popup-container.facebook-confirm-popup .popup {
+    width: 95%;
+  }
+}
+
+.popup-container.facebook-confirm-popup .popup button {
+  color: #434343;
+  background-color: transparent !important;
+
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
+.popup-container.facebook-confirm-popup .popup button.button-dark:hover {
+  background-color: #eda04b !important;
+}
+
+.popup-container.facebook-confirm-popup .popup button.button-assertive:hover {
+  background-color: #DB4B23 !important;
+}
+
